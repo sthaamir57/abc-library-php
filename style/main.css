@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #323232;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* nav */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 16px;
+    position: fixed;
+    width: 100vw;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a {
+    padding: 18px 30px;
+    font-weight: 500;
+    margin-left: 16px;
+}
+
+.logo a {
+    padding: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo a span {
+    color: #fff;
+}
+
+nav::before,
+nav::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+}
+
+nav::before {
+    transform: translate(-40%, -40%);
+    background-color: #e0c1ffa9;
+    z-index: -1000;
+}
+
+nav::after {
+    transform: translate(-25%, -50%);
+    background-color: #531590a9;
+    z-index: -100;
+}
+
+nav ul li a:hover {
+    color:rebeccapurple;
+}
+
+.btn-nav {
+    background-color: #531590;
+    color: #fff;
+    border-radius: 40px;
+    transition: background 0.5s ease;
+}
+
+.btn-nav:hover {
+    color: #fff;
+    background-color: #6d22b8;
+}
+
+/* form */
+
+.log-in, .sign-up {
+    width: 400px;
+}
+
+form {
+    margin: 32px;
+}
+
+form,
+.form-inputs,
+.form-input,
+.form-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    margin-bottom: 24px;
+}
+
+.sign-up .form-input {
+    margin-bottom: 14px;
+}
+
+.form-input p {
+    font-size: 12px;
+    color: red;
+    visibility: hidden;
+}
+
+.form-title {
+    margin-bottom: 32px;
+}
+
+.form-el,
+.form-main {
+    margin-bottom: 16px;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #a4a4a4;
+    font-weight: 500;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: thin solid #a4a4a4;
+    font-weight: 600;
+}
+
+.btn {
+    padding: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-color: #663399;
+    cursor: pointer;
+    transition: background 0.5s ease;
+}
+
+.btn:hover {
+    background-color: #6d22b8;
+}
+
+form p {
+    font-weight: 500;
+}
+
+form p a {
+    font-weight: 800;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    margin-left: 150px;
+    justify-content: space-around;
+    align-self: center;
+}
+
+main {
+    flex: 2;
+}
+
+.left {
+    flex: 1;
+    background-image: url(../img/abc-building.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin: 60px;
+    border-radius: 10px;
+    transform: translateX(20%);
+}
+
+/* others */
+
+.content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content h1 {
+    font-size: 72px;
+}
+
+.content p {
+    font-size: 32px;
+}
+
+.error, .error:focus {
+    outline: 2px solid red;
+}
+
+@media (max-width: 1050px) {
+    .left {
+        display: none;
+    }
+
+    .wrapper {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .log-in, .sign-up {
+        width: 300px;
+    }
+
+    .content h1 {
+        font-size: 54px;
+    }
+    
+    .content p {
+        font-size: 18px;
+    }
+
+    nav ul li a {
+        padding: 18px 14px;
+        margin-left: 6px;
+    }
+
+    main form {
+        margin-top: 200px;
+    }
+    
+}
